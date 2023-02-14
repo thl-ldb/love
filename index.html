@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>抽奖转盘</title>
+    <title>爱情魔力圈圈</title>
+    <link rel="icon" href="images/index.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="wheelpage.css">
 </head>
-<body>
+<body >
 <div id="wheel-wrap">
     <div id="w-tit">
-        幸运大转盘
+        爱情魔力圈圈
     </div>
     <div id="w-main">
         <div id="rotate">
             <div id="pointer"></div>
             <div id="rotatein">
-                <div class="prize prize_1"><strong>苹果6s</strong><br><span>手机一部</span></div>
-                <div class="prize prize_2"><strong>未中奖</strong><br><span>谢谢参与</span></div>
-                <div class="prize prize_3"><strong>充电宝</strong><br><span>1部</span></div>
-                <div class="prize prize_4"><strong>未中奖</strong><br><span>谢谢参与</span></div>
-                <div class="prize prize_5"><strong>U盘</strong><br><span>4G 1个</span></div>
-                <div class="prize prize_6"><strong>未中奖</strong><br><span>谢谢参与</span></div>
-                <div class="prize prize_7"><strong>15元</strong><br><span>手机话费</span></div>
+                <div class="prize prize_1"><strong>名牌包包</strong><br><span>5K以内</span></div>
+                <div class="prize prize_2"><strong>周边一日游</strong><br><span>地点任选</span></div>
+                <div class="prize prize_3"><strong>未中奖</strong><br><span>谢谢参与</span></div>
+                <div class="prize prize_4"><strong>黄金项链</strong><br><span>2K以内</span></div>
+                <div class="prize prize_5"><strong>未中奖</strong><br><span>谢谢参与</span></div>
+                <div class="prize prize_6"><strong>520</strong><br><span>现金</span></div>
+                <div class="prize prize_7"><strong>大鱼海堂</strong><br><span>自助餐一次</span></div>
                 <div class="prize prize_8"><strong>未中奖</strong><br><span>谢谢参与</span></div>
             </div>
         </div>
@@ -41,24 +42,12 @@
                 <div>
                     <ul>
                         <li>
-                            领取方式：xxxxxxxxxxx
+                            领取方式：携带有效证件找唐海龙领取
                         </li>
                         <li>
-                            咨询电话：xxxxxxxxxxx
+                            咨询电话：15220136621
                         </li>
                     </ul>
-                </div>
-                <div>
-                    <address>
-                        <ul>
-                            <li>
-                                玩胜后海馆：xxxxxxxxx
-                            </li>
-                            <li>
-                                工作时间：周一～周日 上午9：00～下午6：00
-                            </li>
-                        </ul>
-                    </address>
                 </div>
             </div>
             <div class="card2">
@@ -88,13 +77,13 @@
         var flag = 0;
         function raward(rotate){
             switch (rotate){
-                case 337.5 :{flag=1; return '6s';break;}
-                case 292.5 :{flag=2;break;}
-                case 247.5 :{flag=1; return '充电宝';break;}
-                case 202.5 :{flag=2;break;}
-                case 157.5 :{flag=1; return 'U盘';break;}
-                case 112.5 :{flag=2;break;}
-                case 67.5 :{ flag=1; return '15元手机话费';break;}
+                case 337.5 :{flag=1; return '名牌包包';break;}
+                case 292.5 :{flag=1; return '周边一日游'; break;}
+                case 247.5 :{flag=2; break;}
+                case 202.5 :{flag=1; return '黄金项链'; break;}
+                case 157.5 :{flag=2; break;}
+                case 112.5 :{flag=1; return '现金520'; break;}
+                case 67.5 :{ flag=1; return '大鱼海堂自助餐一次';break;}
                 case 22.5 :{ flag=2;break;}
                 default : {flag=2; return '很遗憾未中奖'}
             }
@@ -104,18 +93,14 @@
             var random = parseInt(Math.random()*1000);
             if(random == 1){
                 return 337.5;
-            }else if( 1 < random && random <= 40 ){
-                return 247.5;
-            }else if( 40 < random && random <= 200 ){
-                return 157.5;
-            }else if( 201 < random && random <= 400 ){
-                return 67.5;
-            }else if( 401 < random && random <= 550 ){
+            }else if( (1 < random && random <= 200)){
                 return 292.5;
-            }else if( 551 < random && random <= 700){
+            }else if( 500 < random && random <= 510 ){
                 return 202.5;
-            }else if( 701 < random && random <= 850){
+            }else if( 510 < random && random <= 520 ){
                 return 112.5;
+            }else if( (600 < random && random <= 800)){
+                return 67.5;
             }else{
                 return 22.5;
             }
